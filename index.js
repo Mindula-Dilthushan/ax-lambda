@@ -39,7 +39,7 @@ exports.handler = async function (event) {
     switch (true) {
 
         case event.httpMethod === 'GET' && event.path === userPath:
-            response = await getUser(event.queryStringParameters.MemberId);
+            response = await getUser(event.queryStringParameters.id);
             break;
         case event.httpMethod === 'GET' && event.path === usersPath:
             response = await getUsers();
@@ -49,10 +49,10 @@ exports.handler = async function (event) {
             break;
         case event.httpMethod === 'PATCH' && event.path === userPath:
             const requestBody = JSON.parse(event.body);
-            response = await updateUser(requestBody.MemberId, requestBody.updateKey, requestBody.updateValue);
+            response = await updateUser(requestBody.id, requestBody.updateKey, requestBody.updateValue);
             break;
         case event.httpMethod === 'DELETE' && event.path === userPath:
-            response = await deleteUser(JSON.parse(event.body).MemberId);
+            response = await deleteUser(JSON.parse(event.body).id);
             break;
         default:
             response = axResponse(404, '404 Not Found');
