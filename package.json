@@ -1,0 +1,26 @@
+{
+  "name": "ax-lambda",
+  "version": "1.0.0",
+  "description": "This is serverless API with AWS Lambda. Database using DynamoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mindula-Dilthushan/ax-lambda.git"
+  },
+  "keywords": [
+    "aws-lambda"
+  ],
+  "author": "mindula dilthushan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mindula-Dilthushan/ax-lambda/issues"
+  },
+  "homepage": "https://github.com/Mindula-Dilthushan/ax-lambda#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1375.0",
+    "dotenv": "^16.0.3"
+  }
+}

@@ -1,2 +1,5 @@
 .idea
 ax-lambda.iml
+node_modules
+.env
+api
